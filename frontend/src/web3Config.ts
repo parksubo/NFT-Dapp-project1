@@ -278,7 +278,7 @@ const mintSlimeTokenAbi: AbiItem[] = [
 				"type": "uint256"
 			}
 		],
-		"name": "silmeTypes",
+		"name": "slimeTypes",
 		"outputs": [
 			{
 				"internalType": "uint256",

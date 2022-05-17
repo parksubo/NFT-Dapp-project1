@@ -13,7 +13,7 @@ contract MintSlimeToken is ERC721Enumerable {
     constructor() ERC721("Slime", "SLM") {}
 
     // 앞의 uint256은 slimeTokenId, 뒤에 slimeTokenId는 slimeType 맵핑
-    mapping(uint256 => uint256) public silmeTypes;
+    mapping(uint256 => uint256) public slimeTypes;
 
     function mintSlimeToken() public {
         // totalSupply()는 지금까지 발행한 NFT의 양을 나타냄
@@ -23,7 +23,7 @@ contract MintSlimeToken is ERC721Enumerable {
         uint256 slimeType = uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender, slimeTokenId))) % 5 + 1;
 
 
-        silmeTypes[slimeTokenId] = slimeType;
+        slimeTypes[slimeTokenId] = slimeType;
 
         // _mint(주최자, NFT TOKEN ID), msg.sender면 이 NFT를 minting한 주최자라는 뜻
         _mint(msg.sender, slimeTokenId);

@@ -1,6 +1,7 @@
 import React, { FC, useState,  } from "react";
 import { Box, Text, Flex, Button } from '@chakra-ui/react';
 import { mintSlimeTokenContract } from "../web3Config";
+import SlimeCard from "../components/SlimeCard";
 
 // 타입스크립트는 Props의 타입을 모두 정해주어야 함
 interface MainProps {
@@ -10,7 +11,7 @@ interface MainProps {
 // Generic을 붙여서 App으로 부터 받아온 account를 사용할 수 있게 함
 const Main: FC<MainProps> = ({ account }) => {
 
-  const [newSlimeCard, setNewSlimeCard] = useState<string>();
+  const [newSlimeType, setNewSlimeType] = useState<string>();
 
   // mint 버튼을 클릭했을 때 발동하는 함수
   const onClickMint = async() => {
@@ -23,7 +24,26 @@ const Main: FC<MainProps> = ({ account }) => {
         .mintSlimeToken()
         .send({from: account});
 
-      console.log(response);
+      if(response.status) {
+        // NFT 토큰을 몇개 가지고 있는지
+        const balanceLength = await mintSlimeTokenContract.methods
+        .balanceOf(account)
+        .call();
+        
+        // (owner, index)
+        const slimeTokenId = await mintSlimeTokenContract.methods
+        .tokenOfOwnerByIndex(account, parseInt(balanceLength, 10) - 1)
+        .call();
+      
+
+        // 타입 보기
+        const slimeType = await mintSlimeTokenContract.methods
+        .slimeTypes(slimeTokenId)
+        .call();
+
+        setNewSlimeType(slimeType);
+        // console.log(response);
+      }
     } 
     catch (error) {
       console.error(error);
@@ -39,7 +59,11 @@ const Main: FC<MainProps> = ({ account }) => {
       direction="column"
     >
       <Box>
-        {newSlimeCard ? <div>SlimeCard</div> : <Text>Let's mint Slime Card</Text>}
+        {newSlimeType ? (
+          <SlimeCard slimeType={newSlimeType} />
+        ) : (
+          <Text>Let's mint Slime Card!!!</Text>
+        )}
       </Box>
       <Button
         mt={4}
