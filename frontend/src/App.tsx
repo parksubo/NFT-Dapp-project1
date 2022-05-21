@@ -3,6 +3,8 @@ import {Button} from '@chakra-ui/react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Main from "./routes/main";
+import Layout from "./components/Layout";
+import MySlime from "./routes/my-slime";
 
 const App: FC = () => {
 
@@ -37,9 +39,12 @@ const App: FC = () => {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main account={account} />}></Route>
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Main account={account} />}></Route>
+          <Route path="my-slime" element={<MySlime account={account} />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
 
   )
