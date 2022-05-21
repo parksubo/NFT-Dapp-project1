@@ -281,7 +281,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "silmeTypes",
+				"name": "slimeTypes",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -588,11 +588,11 @@
 			]
 		},
 		"MintSlimeToken.sol": {
-			"keccak256": "0x041b48fdce6faf94f8adefad316be74ec3f90bc43b8eab93fe9c43e0b6886ed4",
+			"keccak256": "0x0e22315e358fee3eb4608ebf3aaa4dc4ac0046d9c3d8a95badde96badd7e4364",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c89c721dffb2b5298159fc1e98376770a77a3dc78a625c1c82013833cd74999b",
-				"dweb:/ipfs/QmZvhBqeTzJkyW4Zbjz7cB5yAxSNcDhQ8zYaDibcdo6PqA"
+				"bzz-raw://6d259ea6dfc7e4bc4ae000ba9d4058c28cdb6c33986c08a5275493cabf5e0fbc",
+				"dweb:/ipfs/QmfWagsJGU1XeWrWQAhMGEHBN2tkBcR5Z2qkKCY8kk2RPS"
 			]
 		}
 	},

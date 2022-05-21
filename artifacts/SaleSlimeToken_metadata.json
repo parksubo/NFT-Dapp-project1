@@ -228,11 +228,11 @@
 			]
 		},
 		"MintSlimeToken.sol": {
-			"keccak256": "0x33f54aca5c5cbdd9f953656fbe4ace1758115ffd3ebf1e64b9aa5bf1867695b3",
+			"keccak256": "0x0e22315e358fee3eb4608ebf3aaa4dc4ac0046d9c3d8a95badde96badd7e4364",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://72a74c86faa55b38b0df02cc16966735636edd358ac2c50f76e8247f7a87688f",
-				"dweb:/ipfs/QmRSjtmZmN33WDoXJxx33R3LiBmYY4uuNFXHATA6kPgu4L"
+				"bzz-raw://6d259ea6dfc7e4bc4ae000ba9d4058c28cdb6c33986c08a5275493cabf5e0fbc",
+				"dweb:/ipfs/QmfWagsJGU1XeWrWQAhMGEHBN2tkBcR5Z2qkKCY8kk2RPS"
 			]
 		},
 		"SaleSlimeToken.sol": {

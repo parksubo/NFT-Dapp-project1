@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: MIT
+// remixd -s . --remix-ide https://remix.ethereum.org
 
 // 프라그마 버전
 pragma solidity ^0.8.0; 
