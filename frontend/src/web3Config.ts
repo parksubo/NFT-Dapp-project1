@@ -529,9 +529,8 @@ const saleSlimeTokenAbi: AbiItem[] = [
 	}
 ]
 
-const mintSlimeTokenAddress = "0x2eb1FE15e068dBf49715FAf9F7128bE061AB83f8";
-
-const saleSlimeTokenAddress = "0xa7BF049484A8271FbFFCFC3C2AeCd1b442679760";
+export const mintSlimeTokenAddress = "0x2eb1FE15e068dBf49715FAf9F7128bE061AB83f8";
+export const saleSlimeTokenAddress = "0xa7BF049484A8271FbFFCFC3C2AeCd1b442679760";
 
 
 export const web3 = new Web3(window.ethereum);
